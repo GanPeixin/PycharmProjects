@@ -15,5 +15,6 @@ if __name__ == '__main__':
     print("CHANGE222")
     print("CHANGE111")
     print("main")
+    print("conflict")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
