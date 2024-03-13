@@ -13,7 +13,6 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
     print("CHANGE222")
-    print("CHANGE111")
     print("main")
     print("conflict")
 
