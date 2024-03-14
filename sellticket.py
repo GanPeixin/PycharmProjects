@@ -8,8 +8,9 @@ def sellticket(tid):
     global i
     global mutex
     while(True):
-        mutexflag = mutex.acquire(True)
-        if mutexflag:
+        # mutexflag = mutex.acquire(True)
+        # if mutexflag:
+        if mutex.acquire(): #acquire包含先判断是否上锁，若否再进行上锁的片段
             if i!=0:
                 i = i - 1
                 print(tid, "left ticket=", i)
@@ -17,7 +18,7 @@ def sellticket(tid):
                 print(tid, "No more ticket")
                 os._exit(0)
 
-        mutex.release()
+        mutex.release()     #acquire和release可以理解为关锁和开锁
         time.sleep(0.5) #间隔0.5s，好让另外两个线程进场
 
 i = 15
